@@ -13,5 +13,5 @@ async def read_item(skip: int = 0, limit: int = 10):
 @app.get("/items/{item_id}")
 async def read_item_param(item_id: str, q: str | None = None):
     if q:
-        return {"item_id": item_id, "q": q}
-    return {"item_id": item_id}
+        return {"item": item_id, "q": q}
+    return {"item": item_id}
